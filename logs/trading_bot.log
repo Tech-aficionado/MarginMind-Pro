@@ -1,0 +1,120 @@
+2026-03-26 13:20:17,970 - INFO - Bot started and logs are being saved to logs\trading_bot.log
+2026-03-26 13:20:19,107 - INFO - Trying to place order: BTCUSDT BUY MARKET qty=0.001 price=None
+2026-03-26 13:20:19,596 - INFO - Order 23743505 status is FILLED. Avg price: 70085.83
+2026-03-26 13:56:08,294 - INFO - Bot started and logs are being saved to logs\trading_bot.log
+2026-03-26 13:56:10,495 - INFO - Trying to place order: BTCUSDT BUY MARKET qty=0.001 price=None
+2026-03-26 13:56:10,753 - INFO - Order 23754147 status is FILLED. Avg price: 69843.36
+2026-03-26 13:58:09,243 - INFO - Bot started and logs are being saved to logs\trading_bot.log
+2026-03-26 13:58:27,662 - INFO - Trying to place order: BTCUSDT BUY MARKET qty=0.0001 price=None
+2026-03-26 13:58:27,905 - INFO - Order 23754773 status is FILLED. Avg price: 69864.18
+2026-03-26 13:59:34,340 - INFO - Bot started and logs are being saved to logs\trading_bot.log
+2026-03-26 13:59:35,434 - INFO - Trying to place order: BTCUSDT BUY LIMIT qty=0.001 price=60000.0
+2026-03-26 13:59:35,961 - INFO - Order 23755059 status is NEW. Avg price: 60000.00000000
+2026-03-26 13:59:36,887 - INFO - Bot started and logs are being saved to logs\trading_bot.log
+2026-03-26 13:59:38,486 - INFO - Trying to place order: ETHUSDT SELL LIMIT qty=0.05 price=4000.0
+2026-03-26 13:59:39,100 - INFO - Order 13997043 status is NEW. Avg price: 4000.00000000
+2026-03-26 13:59:40,141 - INFO - Bot started and logs are being saved to logs\trading_bot.log
+2026-03-26 13:59:42,080 - INFO - Trying to place order: BTCUSDT SELL MARKET qty=0.001 price=None
+2026-03-26 13:59:42,251 - INFO - Order 23755072 status is FILLED. Avg price: 69835.57
+2026-03-26 14:06:23,682 - INFO - Bot is warming up... Logging to logs\trading_bot.log
+2026-03-26 14:06:41,100 - ERROR - Could not connect to Binance: APIError(code=-2015): Invalid API-key, IP, or permissions for action
+2026-03-26 14:08:38,986 - INFO - Bot is warming up... Logging to logs\trading_bot.log
+2026-03-26 14:08:51,090 - ERROR - Could not connect to Binance (Testnet): APIError(code=-2015): Invalid API-key, IP, or permissions for action
+2026-03-26 14:10:26,209 - INFO - Bot is warming up... Logging to logs\trading_bot.log
+2026-03-26 14:10:31,941 - ERROR - Could not connect to Binance (Testnet): APIError(code=-2015): Invalid API-key, IP, or permissions for action
+2026-03-26 14:12:58,976 - INFO - Bot is warming up... Logging to logs\trading_bot.log
+2026-03-26 14:13:02,867 - ERROR - Could not connect to Binance (Testnet): APIError(code=-2015): Invalid API-key, IP, or permissions for action
+2026-03-26 14:15:58,050 - INFO - Bot is warming up... Logging to logs\trading_bot.log
+2026-03-26 14:16:01,896 - ERROR - Could not connect to Binance (Testnet): APIError(code=-2015): Invalid API-key, IP, or permissions for action.
+2026-03-26 14:16:28,809 - INFO - Bot is warming up... Logging to logs\trading_bot.log
+2026-03-26 14:16:30,132 - ERROR - Could not connect to Binance (Testnet): APIError(code=-2015): Invalid API-key, IP, or permissions for action.
+2026-03-26 14:16:45,686 - INFO - Bot is warming up... Logging to logs\trading_bot.log
+2026-03-26 14:16:46,503 - ERROR - Could not connect to Binance (Mainnet): APIError(code=-2015): Invalid API-key, IP, or permissions for action.
+2026-03-26 14:18:26,445 - INFO - Bot is warming up... Logging to logs\trading_bot.log
+2026-03-26 14:18:28,049 - ERROR - Could not connect to Binance (Testnet): APIError(code=-2015): Invalid API-key, IP, or permissions for action.
+2026-03-26 14:19:59,160 - INFO - Bot is warming up... Logging to logs\trading_bot.log
+2026-03-26 14:20:01,045 - ERROR - Could not connect to Binance (Testnet): APIError(code=-2015): Invalid API-key, IP, or permissions for action.
+2026-03-26 14:25:35,988 - INFO - Bot is warming up... Logging to logs\trading_bot.log
+2026-03-26 14:25:57,788 - INFO - Bot is warming up... Logging to logs\trading_bot.log
+2026-03-26 14:26:19,207 - INFO - Attempting order: BTCUSDT BUY MARKET | Qty: 0.002 | Price: None
+2026-03-26 14:26:19,444 - INFO - Order 12994883418 is NEW. Average Price: 0.00
+2026-03-26 14:27:15,500 - ERROR - Could not connect to Binance (Testnet): APIError(code=-1021): Timestamp for this request is outside of the recvWindow.
+2026-03-26 14:28:14,092 - INFO - Bot is warming up... Logging to logs\trading_bot.log
+2026-03-26 14:28:33,067 - INFO - Attempting order: BTCUSDT BUY MARKET | Qty: .05 | Price: None
+2026-03-26 14:28:33,293 - INFO - Order 12994902614 is NEW. Average Price: 0.00
+2026-03-26 14:32:06,987 - INFO - Attempting order: BTCUSDT BUY MARKET | Qty: .05 | Price: None
+2026-03-26 14:32:07,191 - INFO - Order 12994924860 is NEW. Average Price: 0.00
+2026-03-26 14:39:13,971 - INFO - Bot is warming up... Logging to logs\trading_bot.log
+2026-03-26 14:39:27,305 - INFO - Attempting order: BTCUSDT BUY MARKET | Qty: 10 | Price: None
+2026-03-26 14:39:27,533 - ERROR - Something went wrong with the order: APIError(code=-2019): Margin is insufficient.
+2026-03-26 14:39:27,534 - ERROR - Order failed during execution: APIError(code=-2019): Margin is insufficient.
+2026-03-26 14:39:41,253 - INFO - Attempting order: BTCUSDT BUY MARKET | Qty: .1 | Price: None
+2026-03-26 14:39:41,527 - INFO - Order 12994940630 is NEW. Average Price: 0.00
+2026-03-26 14:39:41,555 - INFO - [TESTNET][FUTURES] Order logged to logs\market_order.log
+2026-03-26 14:42:44,142 - INFO - Bot is warming up... Logging to logs\trading_bot.log
+2026-03-26 14:42:53,039 - ERROR - Could not connect to Binance (Testnet): APIError(code=-2015): Invalid API-key, IP, or permissions for action.
+2026-03-26 14:43:43,102 - INFO - Bot is warming up... Logging to logs\trading_bot.log
+2026-03-26 14:43:59,540 - INFO - Attempting order: BTCUSDT BUY MARKET | Qty: .002 | Price: None
+2026-03-26 14:44:01,567 - INFO - Checking order 12994948263... status is FILLED
+2026-03-26 14:44:01,568 - INFO - Order 12994948263 is FILLED. Average Price: 70022.90000
+2026-03-26 14:44:01,569 - INFO - [TESTNET][FUTURES] Order logged to logs\market_order.log
+2026-03-26 14:45:38,715 - INFO - Bot is warming up... Logging to logs\trading_bot.log
+2026-03-26 14:45:40,724 - INFO - Attempting order: BTCUSDT BUY MARKET | Qty: 0.002 | Price: None
+2026-03-26 14:45:42,447 - INFO - Checking order 12994950633... status is FILLED
+2026-03-26 14:45:42,448 - INFO - Order 12994950633 is FILLED. Average Price: 70020.00000
+2026-03-26 14:45:42,449 - INFO - [TESTNET][FUTURES] Order logged to logs\market_order.log
+2026-03-26 14:45:43,514 - INFO - Bot is warming up... Logging to logs\trading_bot.log
+2026-03-26 14:45:45,028 - INFO - Attempting order: BTCUSDT SELL MARKET | Qty: 0.002 | Price: None
+2026-03-26 14:45:47,093 - INFO - Checking order 12994950726... status is FILLED
+2026-03-26 14:45:47,093 - INFO - Order 12994950726 is FILLED. Average Price: 70014.10000
+2026-03-26 14:45:47,094 - INFO - [TESTNET][FUTURES] Order logged to logs\market_order.log
+2026-03-26 14:45:47,994 - INFO - Bot is warming up... Logging to logs\trading_bot.log
+2026-03-26 14:45:50,247 - INFO - Attempting order: BTCUSDT BUY LIMIT | Qty: 0.001 | Price: 60000.0
+2026-03-26 14:45:50,411 - ERROR - Something went wrong with the order: APIError(code=-4164): Order's notional must be no smaller than 100 (unless you choose reduce only).
+2026-03-26 14:45:50,412 - ERROR - Order failed during execution: APIError(code=-4164): Order's notional must be no smaller than 100 (unless you choose reduce only).
+2026-03-26 14:45:50,412 - ERROR - Global crash: APIError(code=-4164): Order's notional must be no smaller than 100 (unless you choose reduce only).
+2026-03-26 14:45:51,266 - INFO - Bot is warming up... Logging to logs\trading_bot.log
+2026-03-26 14:45:53,268 - INFO - Attempting order: ETHUSDT BUY MARKET | Qty: 0.1 | Price: None
+2026-03-26 14:45:54,974 - INFO - Checking order 8619235021... status is FILLED
+2026-03-26 14:45:54,974 - INFO - Order 8619235021 is FILLED. Average Price: 2118.40000
+2026-03-26 14:45:54,975 - INFO - [TESTNET][FUTURES] Order logged to logs\market_order.log
+2026-03-26 14:45:55,912 - INFO - Bot is warming up... Logging to logs\trading_bot.log
+2026-03-26 14:45:57,845 - INFO - Attempting order: ETHUSDT SELL MARKET | Qty: 0.1 | Price: None
+2026-03-26 14:46:00,495 - INFO - Checking order 8619235086... status is FILLED
+2026-03-26 14:46:00,495 - INFO - Order 8619235086 is FILLED. Average Price: 2118.22000
+2026-03-26 14:46:00,496 - INFO - [TESTNET][FUTURES] Order logged to logs\market_order.log
+2026-03-26 14:46:29,786 - INFO - Bot is warming up... Logging to logs\trading_bot.log
+2026-03-26 14:46:33,178 - INFO - Attempting order: BTCUSDT BUY LIMIT | Qty: 0.002 | Price: 60000.0
+2026-03-26 14:46:34,992 - INFO - Checking order 12994952227... status is NEW
+2026-03-26 14:46:36,255 - INFO - Checking order 12994952227... status is NEW
+2026-03-26 14:46:37,449 - INFO - Checking order 12994952227... status is NEW
+2026-03-26 14:46:38,730 - INFO - Checking order 12994952227... status is NEW
+2026-03-26 14:46:40,543 - INFO - Checking order 12994952227... status is NEW
+2026-03-26 14:46:40,544 - INFO - Order 12994952227 is NEW. Average Price: 0.00
+2026-03-26 14:46:40,545 - INFO - [TESTNET][FUTURES] Order logged to logs\limit_order.log
+2026-03-26 14:47:56,811 - INFO - Bot is warming up... Logging to logs\trading_bot.log
+2026-03-26 14:53:07,714 - ERROR - Could not connect to Binance (Testnet): APIError(code=-2015): Invalid API-key, IP, or permissions for action.
+2026-03-26 14:53:24,579 - INFO - Attempting order: BTCUSDT BUY MARKET | Qty: 0.02 | Price: None
+2026-03-26 14:53:26,109 - INFO - Checking order 12994960402... status is FILLED
+2026-03-26 14:53:26,110 - INFO - Order 12994960402 is FILLED. Average Price: 69962.80000
+2026-03-26 14:53:26,125 - INFO - [TESTNET][FUTURES] Order logged to logs\market_order.log
+2026-03-26 14:53:47,861 - INFO - Bot is warming up... Logging to logs\trading_bot.log
+2026-03-26 14:55:01,524 - INFO - Bot is warming up... Logging to logs\trading_bot.log
+2026-03-26 14:55:09,018 - INFO - Bot is warming up... Logging to logs\trading_bot.log
+2026-03-26 14:55:11,792 - INFO - Attempting order: BTCUSDT BUY MARKET | Qty: 0.001 | Price: None
+2026-03-26 14:55:11,967 - ERROR - Something went wrong with the order: APIError(code=-4164): Order's notional must be no smaller than 100 (unless you choose reduce only).
+2026-03-26 14:55:11,968 - ERROR - Order failed during execution: APIError(code=-4164): Order's notional must be no smaller than 100 (unless you choose reduce only).
+2026-03-26 14:55:11,968 - ERROR - Global crash: APIError(code=-4164): Order's notional must be no smaller than 100 (unless you choose reduce only).
+2026-03-26 14:57:00,786 - INFO - Bot is warming up... Logging to logs\trading_bot.log
+2026-03-26 14:57:25,050 - INFO - Attempting order: BTCUSDT BUY LIMIT | Qty: 0.12 | Price: 69947.60
+2026-03-26 14:57:27,214 - INFO - Checking order 12994970006... status is FILLED
+2026-03-26 14:57:27,214 - INFO - Order 12994970006 is FILLED. Average Price: 69947.60000
+2026-03-26 14:57:27,215 - INFO - [TESTNET][FUTURES] Order logged to logs\limit_order.log
+2026-03-26 14:57:46,834 - INFO - Attempting order: BTCUSDT BUY MARKET | Qty: 0.12 | Price: None
+2026-03-26 14:57:48,610 - INFO - Checking order 12994971191... status is FILLED
+2026-03-26 14:57:48,610 - INFO - Order 12994971191 is FILLED. Average Price: 69946.02750
+2026-03-26 14:57:48,611 - INFO - [TESTNET][FUTURES] Order logged to logs\market_order.log
+2026-03-26 14:57:57,380 - INFO - Attempting order: BTCUSDT SELL MARKET | Qty: 0.12 | Price: None
+2026-03-26 14:57:59,555 - INFO - Checking order 12994971569... status is FILLED
+2026-03-26 14:57:59,555 - INFO - Order 12994971569 is FILLED. Average Price: 69944.70000
+2026-03-26 14:57:59,556 - INFO - [TESTNET][FUTURES] Order logged to logs\market_order.log
