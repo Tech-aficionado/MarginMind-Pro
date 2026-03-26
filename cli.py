@@ -45,6 +45,9 @@ def start():
         pr = input("Enter Price for Limit order: ").strip()
     
     # Retrieve API credentials from environment variables.
+    key = os.getenv("BINANCE_API_KEY")
+    sec = os.getenv("BINANCE_API_SECRET")
+
     if not key or not sec:
         print("Wait! I couldn't find your keys in .env. Please enter them here:")
         key = input("API Key: ").strip()

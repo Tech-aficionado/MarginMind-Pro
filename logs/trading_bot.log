@@ -118,3 +118,12 @@
 2026-03-26 14:57:59,555 - INFO - Checking order 12994971569... status is FILLED
 2026-03-26 14:57:59,555 - INFO - Order 12994971569 is FILLED. Average Price: 69944.70000
 2026-03-26 14:57:59,556 - INFO - [TESTNET][FUTURES] Order logged to logs\market_order.log
+2026-03-26 15:19:12,912 - INFO - Bot is warming up... Logging to C:\Projects\Assignments\PrimeTrade.ai - Python Developer\logs\trading_bot.log
+2026-03-26 15:20:07,832 - INFO - Bot is warming up... Logging to C:\Projects\Assignments\PrimeTrade.ai - Python Developer\logs\trading_bot.log
+2026-03-26 15:23:18,367 - INFO - Bot is warming up... Logging to C:\Projects\Assignments\PrimeTrade.ai - Python Developer\logs\trading_bot.log
+2026-03-26 15:23:43,969 - INFO - Bot is warming up... Logging to C:\Projects\Assignments\PrimeTrade.ai - Python Developer\logs\trading_bot.log
+2026-03-26 15:23:57,391 - INFO - Initiating BUY MARKET order: 0.02 BTCUSDT
+2026-03-26 15:23:57,391 - INFO - Dispatching BUY MARKET order: 0.02 BTCUSDT
+2026-03-26 15:24:00,910 - INFO - Checking order 12995161186... status is FILLED
+2026-03-26 15:24:00,910 - INFO - Order 12995161186 is FILLED. Average Price: 69463.70000
+2026-03-26 15:24:00,912 - INFO - Audit results appended to logs\market_order.log

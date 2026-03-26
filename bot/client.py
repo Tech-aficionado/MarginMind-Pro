@@ -3,6 +3,11 @@
 # Description: Core API Client for Binance Futures interaction.
 # -----------------------------------------------------------------------------
 
+import os
+import time
+import logging
+from binance.client import Client
+
 class BinanceClient:
     """
     Binance API Client specialized for Futures trading.
