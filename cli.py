@@ -1,8 +1,3 @@
-# -----------------------------------------------------------------------------
-# Module: cli
-# Description: Command-Line Interface for the Binance Futures Bot.
-# -----------------------------------------------------------------------------
-
 import argparse
 import os
 import logging
@@ -12,64 +7,55 @@ from bot.client import BinanceClient
 from bot.orders import place_order
 from dotenv import load_dotenv
 
-# Ensure environment variables are loaded relative to the script location.
-script_dir = os.path.dirname(os.path.abspath(__file__))
-load_dotenv(os.path.join(script_dir, ".env"))
+script_directory_path = os.path.dirname(os.path.abspath(__file__))
+load_dotenv(os.path.join(script_directory_path, ".env"))
 
-def start():
-    """
-    Entry point for the CLI application.
-    Supports both direct command-line arguments and interactive mode.
-    """
-    # Initialize the global logging configuration.
+def execute_trading_cli():
     setup_logging()
     
-    # Define command-line arguments for non-interactive execution.
-    p = argparse.ArgumentParser(description="My custom Binance Trading Bot")
-    p.add_argument("--symbol", help="The pair you want to trade, like BTCUSDT")
-    p.add_argument("--side", help="Are you buying or selling? (BUY/SELL)")
-    p.add_argument("--type", help="Market or Limit?")
-    p.add_argument("--quantity", help="How many coins?")
-    p.add_argument("--price", help="Required for Limit orders only")
+    terminal_argument_parser = argparse.ArgumentParser(description="MarginMind - Trading Bot")
     
-    args = p.parse_args()
+    terminal_argument_parser.add_argument("--symbol", help="Trading pair (e.g. BTCUSDT)")
+    terminal_argument_parser.add_argument("--side", help="BUY or SELL")
+    terminal_argument_parser.add_argument("--type", help="MARKET or LIMIT")
+    terminal_argument_parser.add_argument("--quantity", help="Amount to trade")
+    terminal_argument_parser.add_argument("--price", help="Price (only for LIMIT orders)")
+    
+    command_line_inputs = terminal_argument_parser.parse_args()
 
-    # Fallback to Interactive Mode if arguments are missing.
-    sym = args.symbol or input("Enter Symbol (e.g., BTCUSDT): ").strip().upper()
-    side = args.side or input("Enter Side (BUY/SELL): ").strip().upper()
-    ot = args.type or input("Enter Type (MARKET/LIMIT): ").strip().upper()
-    qty = args.quantity or input("Enter Quantity: ").strip()
-    pr = args.price
+    active_symbol = command_line_inputs.symbol or input("Which coin? (e.g. BTCUSDT): ").strip().upper()
+    trade_side = command_line_inputs.side or input("Buy or Sell?: ").strip().upper()
+    execution_mode = command_line_inputs.type or input("Market or Limit?: ").strip().upper()
+    trade_volume = command_line_inputs.quantity or input("How much?: ").strip()
     
-    if ot == 'LIMIT' and not pr:
-        pr = input("Enter Price for Limit order: ").strip()
+    limit_price_value = command_line_inputs.price
     
-    # Retrieve API credentials from environment variables.
-    key = os.getenv("BINANCE_API_KEY")
-    sec = os.getenv("BINANCE_API_SECRET")
+    if execution_mode == 'LIMIT' and not limit_price_value:
+        limit_price_value = input("What price?: ").strip()
+    
+    api_access_key = os.getenv("BINANCE_API_KEY")
+    api_secret_key = os.getenv("BINANCE_API_SECRET")
 
-    if not key or not sec:
-        print("Wait! I couldn't find your keys in .env. Please enter them here:")
-        key = input("API Key: ").strip()
-        sec = input("Secret Key: ").strip()
+    if not api_access_key or not api_secret_key:
+        print("I couldn't find your API keys in the .env file. Please enter them here:")
+        api_access_key = input("API Key: ").strip()
+        api_secret_key = input("Secret Key: ").strip()
 
     try:
-        # Step 1: Input Validation.
-        side = validate_side(side)
-        ot = validate_order_type(ot)
-        qty = validate_quantity(qty)
-        pr = validate_price(pr, ot)
+        sanitized_side = validate_side(trade_side)
+        sanitized_mode = validate_order_type(execution_mode)
+        numeric_qty = validate_quantity(trade_volume)
+        numeric_price = validate_price(limit_price_value, sanitized_mode)
         
-        # Step 2: Initialize Client and Execute Order.
-        bot = BinanceClient(key, sec)
-        place_order(bot, sym, side, ot, qty, pr)
+        trading_client_instance = BinanceClient(api_access_key, api_secret_key)
         
-        print("\nAll done! Check your logs/ folder for the breakdown.")
+        place_order(trading_client_instance, active_symbol, sanitized_side, sanitized_mode, numeric_qty, numeric_price)
+        
+        print("\nOrder placed! You can check the logs/ folder for details.")
 
-    except Exception as err:
-        # Global exception handling to prevent erratic CLI crashes.
-        print(f"\nOops! Something went wrong: {err}")
-        logging.error(f"Global crash: {err}")
+    except Exception as runtime_exception:
+        print(f"\nError: {runtime_exception}")
+        logging.error(f"CLI error: {runtime_exception}")
 
 if __name__ == "__main__":
-    start()
+    execute_trading_cli()

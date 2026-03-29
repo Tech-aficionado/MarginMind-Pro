@@ -1,46 +1,60 @@
-# -----------------------------------------------------------------------------
-# Module: bot.validators
-# Description: Input guarding and validation logic to ensure API compatibility.
-# -----------------------------------------------------------------------------
+def validate_side(trade_side_input):
+    sanitized_side = trade_side_input.upper().strip()
+    
+    if sanitized_side not in ["BUY", "SELL"]:
+        raise ValueError("Side needs to be either BUY or SELL.")
+        
+    return sanitized_side
 
-def validate_side(side):
-    """Ensure the trading side is either BUY or SELL."""
-    # Only BUY or SELL allowed!
-    s = side.upper().strip()
-    if s not in ["BUY", "SELL"]:
-        raise ValueError("Side must be BUY or SELL!")
-    return s
+def validate_order_type(order_type_input):
+    sanitized_type = order_type_input.upper().strip()
+    
+    if sanitized_type not in ["MARKET", "LIMIT"]:
+        raise ValueError("Only MARKET and LIMIT orders are supported right now.")
+        
+    return sanitized_type
 
-def validate_order_type(ot):
-    """Ensure the order type is supported (MARKET or LIMIT)."""
-    # Keeping it simple for the assignment.
-    t = ot.upper().strip()
-    if t not in ["MARKET", "LIMIT"]:
-        raise ValueError("Only MARKET and LIMIT orders are supported for now.")
-    return t
-
-def validate_quantity(qty):
-    """Validate that the quantity is a positive numeric value."""
-    # Quantity needs to be a number.
+def validate_quantity(quantity_string):
     try:
-        val = float(qty)
-        if val <= 0:
-            raise ValueError("Quantity must be more than zero!")
-        return val
+        numeric_value = float(quantity_string)
+        if numeric_value <= 0:
+            raise ValueError("Quantity has to be greater than zero.")
+        return numeric_value
     except ValueError:
-        raise ValueError(f"'{qty}' is not a valid number for quantity.")
+        raise ValueError(f"'{quantity_string}' isn't a valid number for quantity.")
 
-def validate_price(price, order_type):
-    """Ensure price is provided and valid for LIMIT orders."""
-    # If it's a LIMIT order, we MUST have a price.
-    if order_type == "LIMIT":
-        if not price:
-            raise ValueError("Limit orders need a price!")
+def validate_price(price_input, selected_type):
+    if selected_type == "LIMIT":
+        if not price_input:
+            raise ValueError("Limit orders need a price.")
+            
         try:
-            val = float(price)
-            if val <= 0:
-                raise ValueError("Price must be more than zero!")
-            return val
+            numeric_price = float(price_input)
+            if numeric_price <= 0:
+                raise ValueError("Price has to be greater than zero.")
+            return numeric_price
         except ValueError:
-            raise ValueError(f"'{price}' is not a valid number for price.")
-    return None # Market orders don't need a price.
+            raise ValueError(f"'{price_input}' isn't a valid number for price.")
+            
+    return None
+
+def validate_sl_tp_ratios(trade_side, entry_price_val, sl_price_val, tp_price_val):
+    if sl_price_val:
+        stop_loss_numeric = float(sl_price_val)
+        
+        if trade_side == "BUY" and stop_loss_numeric >= float(entry_price_val):
+            raise ValueError("Stop Loss for a BUY order must be below the entry price.")
+            
+        if trade_side == "SELL" and stop_loss_numeric <= float(entry_price_val):
+            raise ValueError("Stop Loss for a SELL order must be above the entry price.")
+            
+    if tp_price_val:
+        take_profit_numeric = float(tp_price_val)
+        
+        if trade_side == "BUY" and take_profit_numeric <= float(entry_price_val):
+            raise ValueError("Take Profit for a BUY order must be above the entry price.")
+            
+        if trade_side == "SELL" and take_profit_numeric >= float(entry_price_val):
+            raise ValueError("Take Profit for a SELL order must be below the entry price.")
+            
+    return True
