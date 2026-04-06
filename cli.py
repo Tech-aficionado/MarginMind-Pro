@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 
 script_directory_path = os.path.dirname(os.path.abspath(__file__))
 load_dotenv(os.path.join(script_directory_path, ".env"))
-
+AWS_KEY=AKIAIOSFODNN7EXAMPLE
 def execute_trading_cli():
     setup_logging()
     
